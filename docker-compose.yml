@@ -1,0 +1,10 @@
+services:
+  web:
+    container_name: profile-web
+    build: ./docker/node
+    volumes:
+      - './:/var/www'
+    ports:
+      - "3000:4200"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
