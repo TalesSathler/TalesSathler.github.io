@@ -17,6 +17,15 @@ import { ZardCardComponent } from './shared/components/card';
 })
 export class App implements AfterViewInit {
   currentYear = new Date().getFullYear();
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
 
   ngAfterViewInit() {
     const script = document.createElement('script');
