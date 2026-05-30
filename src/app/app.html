@@ -233,18 +233,46 @@
       </div>
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-        <div class="reveal" style="transition-delay: 0ms;">
+        <div class="reveal lg:col-span-2" style="transition-delay: 0ms;">
           <z-card zTitle="Audit Platform Overhaul" zDescription="Multinational audit system at Starian">
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              Full-stack developer on a process audit and action plan system
-              handling thousands of daily requests from multinational corporations
-              across Latin America. Refactored legacy code, optimized execution
-              via batch processing, and resolved critical financial billing bugs.
-            </p>
+            <div class="grid gap-6 md:grid-cols-2">
+              <div>
+                <p class="text-muted-foreground text-sm leading-relaxed">
+                  Full-stack developer on a process audit and action plan system
+                  handling thousands of daily requests from multinational corporations
+                  across Latin America. Refactored legacy code, optimized execution
+                  via batch processing, and resolved critical financial billing bugs.
+                </p>
+              </div>
+              <div class="flex flex-col gap-2 border-t pt-4 md:border-t-0 md:pt-0 md:border-l md:pl-6 border-border">
+                <h4 class="text-xs font-semibold uppercase tracking-wider text-brand">Key Achievements</h4>
+                <ul class="space-y-1.5 text-xs text-muted-foreground">
+                  <li class="flex items-start gap-1.5">
+                    <svg class="h-3.5 w-3.5 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Optimized page load times from 20s to 3s</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <svg class="h-3.5 w-3.5 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Reduced overall technical debt by 85%</span>
+                  </li>
+                  <li class="flex items-start gap-1.5">
+                    <svg class="h-3.5 w-3.5 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Secured critical financial and billing flows</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div card-footer class="flex flex-wrap gap-2">
               <z-badge>PHP</z-badge>
               <z-badge>Laravel</z-badge>
               <z-badge>Performance</z-badge>
+              <z-badge zType="outline">Enterprise</z-badge>
             </div>
           </z-card>
         </div>
@@ -349,7 +377,7 @@
 
         <div class="reveal flex gap-4" style="transition-delay: 0ms;">
           <div class="timeline-dot mt-1.5 shrink-0"></div>
-          <z-card class="flex-1" zTitle="Senior Software Engineer — Starian" zDescription="Nov 2021 – Present">
+          <z-card class="flex-1 border-l-2 border-l-brand" zTitle="Senior Software Engineer — Starian" zDescription="Nov 2021 – Present">
             <p class="text-muted-foreground text-sm leading-relaxed">
               Building scalable enterprise auditing platforms for multinational
               corporations across LATAM. Reduced technical debt by 85%, improved
