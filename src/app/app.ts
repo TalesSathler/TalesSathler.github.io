@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ZardAvatarComponent } from './shared/components/avatar';
 import { ZardBadgeComponent } from './shared/components/badge';
 import { ZardButtonComponent } from './shared/components/button';
@@ -15,6 +15,13 @@ import { ZardCardComponent } from './shared/components/card';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
+export class App implements AfterViewInit {
   currentYear = new Date().getFullYear();
+
+  ngAfterViewInit() {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.credly.com/assets/utilities/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }
 }

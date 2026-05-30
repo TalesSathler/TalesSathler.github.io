@@ -1,4 +1,15 @@
 <div class="min-h-screen bg-background">
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-6xl items-center justify-center gap-6 px-4 py-3 text-sm font-medium md:gap-10">
+      <a href="#skills" class="text-muted-foreground hover:text-foreground transition-colors">Skills</a>
+      <a href="#projects" class="text-muted-foreground hover:text-foreground transition-colors">Projects</a>
+      <a href="#experience" class="text-muted-foreground hover:text-foreground transition-colors">Experience</a>
+      <a href="#education" class="text-muted-foreground hover:text-foreground transition-colors">Education</a>
+      <a href="#contact" class="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
   <section class="relative overflow-hidden px-4 py-20 md:py-32">
     <div class="mx-auto max-w-6xl">
@@ -7,9 +18,11 @@
           zFallback="TS" />
         <h1 class="mb-2 text-4xl font-bold tracking-tight md:text-6xl">Tales Sathler Novais</h1>
         <p class="mb-4 text-xl text-muted-foreground md:text-2xl">Full-Stack Developer &amp; Software Engineer</p>
+        <p class="mb-2 text-sm text-muted-foreground/70">Caratinga, MG, Brazil</p>
         <p class="mb-8 max-w-2xl text-muted-foreground">
-          Strong expertise in backend engineering using Java/Spring Boot and PHP/Laravel, with a solid background in
-          software architecture, performance optimization, and technical modernization.
+          10+ years building enterprise software used by thousands across Latin America — from tax management and
+          academic platforms to auditing systems. Specialized in backend architecture, performance optimization, and
+          technical modernization.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a z-button href="#projects" class="z-default">View Projects</a>
@@ -24,25 +37,90 @@
   <section id="skills" class="px-4 py-20">
     <div class="mx-auto max-w-6xl">
       <h2 class="mb-12 text-center text-3xl font-bold">Skills &amp; Technologies</h2>
-      <div class="flex flex-wrap justify-center gap-1.5 sm:gap-3">
-        <z-badge zType="secondary">Java</z-badge>
-        <z-badge zType="secondary">Spring Boot</z-badge>
-        <z-badge zType="secondary">PHP</z-badge>
-        <z-badge zType="secondary">Laravel Framework</z-badge>
-        <z-badge zType="secondary">Zend Framework</z-badge>
-        <z-badge zType="secondary">Python</z-badge>
-        <z-badge zType="secondary">FastAPI</z-badge>
-        <z-badge zType="secondary">JavaScript</z-badge>
-        <z-badge zType="secondary">Vue.js</z-badge>
-        <z-badge zType="secondary">Angular</z-badge>
-        <z-badge zType="secondary">PostgreSQL</z-badge>
-        <z-badge zType="secondary">MySQL</z-badge>
-        <z-badge zType="secondary">MongoDB</z-badge>
-        <z-badge zType="secondary">SQLite</z-badge>
-        <z-badge zType="secondary">Docker</z-badge>
-        <z-badge zType="secondary">Jenkins</z-badge>
-        <z-badge zType="secondary">LangChain</z-badge>
-        <z-badge zType="secondary">Ollama</z-badge>
+      <div class="space-y-8">
+        <div>
+          <h3 class="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">Languages
+          </h3>
+          <div class="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+            <z-badge zType="secondary">PHP</z-badge>
+            <z-badge zType="secondary">Java</z-badge>
+            <z-badge zType="secondary">Python</z-badge>
+            <z-badge zType="secondary">JavaScript</z-badge>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">Frameworks
+          </h3>
+          <div class="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+            <z-badge zType="secondary">Laravel</z-badge>
+            <z-badge zType="secondary">Spring Boot</z-badge>
+            <z-badge zType="secondary">Zend Framework</z-badge>
+            <z-badge zType="secondary">FastAPI</z-badge>
+            <z-badge zType="secondary">Vue.js</z-badge>
+            <z-badge zType="secondary">Nuxt.js</z-badge>
+            <z-badge zType="secondary">Angular</z-badge>
+            <z-badge zType="secondary">RxJS</z-badge>
+            <z-badge zType="secondary">NgRx</z-badge>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">Databases
+          </h3>
+          <div class="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+            <z-badge zType="secondary">PostgreSQL</z-badge>
+            <z-badge zType="secondary">MySQL</z-badge>
+            <z-badge zType="secondary">MongoDB</z-badge>
+            <z-badge zType="secondary">SQLite</z-badge>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">DevOps &amp;
+            Tools</h3>
+          <div class="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+            <z-badge zType="secondary">Docker</z-badge>
+            <z-badge zType="secondary">Jenkins</z-badge>
+            <z-badge zType="secondary">Linux</z-badge>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">AI</h3>
+          <div class="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+            <z-badge zType="secondary">LLM Integration</z-badge>
+            <z-badge zType="secondary">Prompt Engineering</z-badge>
+            <z-badge zType="secondary">LangChain</z-badge>
+            <z-badge zType="secondary">Ollama</z-badge>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">Concepts
+          </h3>
+          <div class="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+            <z-badge zType="secondary">Clean Architecture</z-badge>
+            <z-badge zType="secondary">SOLID</z-badge>
+            <z-badge zType="secondary">TDD</z-badge>
+            <z-badge zType="secondary">REST APIs</z-badge>
+            <z-badge zType="secondary">Microservices</z-badge>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">Soft Skills
+          </h3>
+          <div class="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+            <z-badge zType="secondary">Technical Leadership</z-badge>
+            <z-badge zType="secondary">Mentoring</z-badge>
+            <z-badge zType="secondary">Code Review</z-badge>
+            <z-badge zType="secondary">Team Collaboration</z-badge>
+          </div>
+        </div>
+        <div>
+          <h3 class="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">Spoken
+            Languages</h3>
+          <div class="flex flex-wrap justify-center gap-1.5 sm:gap-3">
+            <z-badge zType="secondary">Portuguese (Native)</z-badge>
+            <z-badge zType="secondary">English (Limited Working)</z-badge>
+            <z-badge zType="secondary">Spanish (Limited Working)</z-badge>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -145,57 +223,6 @@
             <z-badge>REST</z-badge>
           </div>
         </z-card>
-
-        <z-card zTitle="Laravel Jetstream" zDescription="Modern full-stack Laravel with Inertia and Docker">
-          <p class="text-muted-foreground text-sm">
-            Laravel 10 with Jetstream, Inertia.js, Vue, Docker, Postgres,
-            Redis, and Nginx — a production-ready full-stack foundation.
-          </p>
-          <a href="https://github.com/TalesSathler/laravel-jetstream" target="_blank" card-footer
-            class="flex flex-col items-center gap-0.5 text-xs text-muted-foreground hover:text-foreground transition-colors">
-            <z-badge>Laravel Framework</z-badge>
-            <z-badge>Vue</z-badge>
-            <z-badge>Docker</z-badge>
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-            </svg>
-          </a>
-        </z-card>
-
-        <z-card zTitle="Laravel Xdebug" zDescription="Containerized Laravel dev environment with Docker">
-          <p class="text-muted-foreground text-sm">
-            Laravel 10 with Docker orchestration featuring Postgres, Redis,
-            Nginx, PHP 8.3 FPM, and pre-configured Xdebug for debugging.
-          </p>
-          <a href="https://github.com/TalesSathler/laravel-xdebug" target="_blank" card-footer
-            class="flex flex-col items-center gap-0.5 text-xs text-muted-foreground hover:text-foreground transition-colors">
-            <z-badge>PHP</z-badge>
-            <z-badge>Laravel Framework</z-badge>
-            <z-badge>Docker</z-badge>
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-            </svg>
-          </a>
-        </z-card>
-
-        <z-card zTitle="Personal Book Library - Java"
-          zDescription="Library management system built with Java and Spring Boot">
-          <p class="text-muted-foreground text-sm">
-            Full-stack library application demonstrating CRUD operations,
-            data persistence, and RESTful API design with Spring ecosystem.
-          </p>
-          <a href="https://github.com/TalesSathler/personal-book-library-java" target="_blank" card-footer
-            class="flex flex-col items-center gap-0.5 text-xs text-muted-foreground hover:text-foreground transition-colors">
-            <z-badge>Java</z-badge>
-            <z-badge>Spring Boot</z-badge>
-            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-            </svg>
-          </a>
-        </z-card>
       </div>
     </div>
   </section>
@@ -210,7 +237,9 @@
             Building scalable enterprise auditing platforms for multinational
             corporations across LATAM. Reduced technical debt by 85%, improved
             load times from 20s to 3s, implemented AI-powered auditing systems,
-            and solved critical financial and billing issues.
+            and solved critical financial and billing issues. Mentored and
+            onboarded new team members, accelerating integration and team
+            productivity.
           </p>
           <div card-footer class="text-xs text-muted-foreground">
             PHP · Laravel Framework · JavaScript · Angular · AI · Performance · Python
@@ -219,10 +248,10 @@
 
         <z-card zTitle="Senior Software Engineer — VersaTEC" zDescription="May 2017 - Oct 2021">
           <p class="text-muted-foreground text-sm">
-            Technical leadership and development of large-scale academic and
-            tax management systems. Designed scalable architectures, built
-            banking integrations for automated billing, and improved deployment
-            workflows across the engineering pipeline.
+            Technical leadership (team of 8) and development of large-scale
+            academic and tax management systems. Designed scalable
+            architectures, built banking integrations for automated billing,
+            and improved deployment workflows across the engineering pipeline.
           </p>
           <div card-footer class="text-xs text-muted-foreground">
             PHP · Laravel Framework · Zend Framework · JavaScript · jQuery
@@ -231,9 +260,11 @@
 
         <z-card zTitle="Software Engineer — Doctum" zDescription="May 2016 - May 2017">
           <p class="text-muted-foreground text-sm">
-            Development and maintenance of academic systems serving over
-            10,000 students across multiple cities. Built backend and frontend
-            features for a large-scale educational management platform.
+            Full-stack development for a large-scale academic management
+            platform serving 10,000+ students across 14+ cities, supporting
+            over 60 academic programs. Built student portal and administrative
+            modules, implemented new features, and performed critical bug
+            fixes across the full stack.
           </p>
           <div card-footer class="text-xs text-muted-foreground">
             PHP · Zend Framework · JavaScript · jQuery
@@ -251,6 +282,44 @@
             PHP · Laravel Framework · Zend Framework · JavaScript · jQuery
           </div>
         </z-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="px-4 py-20">
+    <div class="mx-auto max-w-4xl">
+      <h2 class="mb-12 text-center text-3xl font-bold">Education</h2>
+      <div class="space-y-6">
+        <z-card zTitle="Distributed Software Architecture" zDescription="PUC Minas | 2018 - 2020">
+          <p class="text-muted-foreground text-sm">
+            Postgraduate specialization in distributed software architecture,
+            focusing on scalable and resilient system design.
+          </p>
+          <div card-footer class="text-xs text-muted-foreground">
+            Architecture · Distributed Systems
+          </div>
+        </z-card>
+        <z-card zTitle="Bachelor's in Computer Science" zDescription="Rede de Ensino Doctum | 2014 - 2017">
+          <p class="text-muted-foreground text-sm">
+            Bacharelado em Ciência da Computação.
+          </p>
+          <div card-footer class="text-xs text-muted-foreground">
+            Computer Science
+          </div>
+        </z-card>
+      </div>
+      <div class="mt-8">
+        <h3 class="mb-6 text-center text-xl font-semibold">Certifications</h3>
+        <div class="flex flex-wrap justify-center gap-3">
+          <z-badge zType="secondary">Clean Code &amp; Clean Architecture</z-badge>
+          <z-badge zType="secondary">RxJS + Angular Material</z-badge>
+          <z-badge zType="secondary">AI Agents with LangGraph</z-badge>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="898f9b63-415f-4eed-aa0a-a228027e4611"
+          data-share-badge-host="https://www.credly.com"></div>
       </div>
     </div>
   </section>
