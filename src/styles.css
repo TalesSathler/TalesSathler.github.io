@@ -37,6 +37,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Accent – Indigo */
+  --brand: oklch(0.55 0.22 264);
+  --brand-hover: oklch(0.48 0.22 264);
+  --brand-foreground: oklch(0.985 0 0);
+  --brand-muted: oklch(0.93 0.05 264);
+  --brand-glow: oklch(0.55 0.22 264 / 15%);
 }
 
 .dark {
@@ -71,6 +78,13 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Accent – Indigo (dark) */
+  --brand: oklch(0.65 0.2 264);
+  --brand-hover: oklch(0.72 0.2 264);
+  --brand-foreground: oklch(0.1 0 0);
+  --brand-muted: oklch(0.269 0.08 264);
+  --brand-glow: oklch(0.65 0.2 264 / 20%);
 }
 
 @theme inline {
@@ -118,6 +132,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   input[type=number]::-webkit-inner-spin-button,
@@ -132,17 +149,146 @@
   }
 }
 
+/* ─── Scrollbar ─────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--muted-foreground);
   border-radius: 5px;
 }
-
 ::-webkit-scrollbar-track {
   border-radius: 5px;
   background: var(--muted);
+}
+
+/* ─── Keyframe Animations ───────────────────────────────── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 oklch(0.55 0.2 145 / 60%);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 6px oklch(0.55 0.2 145 / 0%);
+  }
+}
+
+@keyframes float-glow {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.5; }
+  33%       { transform: scale(1.08) translate(2%, -2%); opacity: 0.65; }
+  66%       { transform: scale(0.95) translate(-2%, 2%); opacity: 0.45; }
+}
+
+/* ─── Animation utility classes ─────────────────────────── */
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease both;
+}
+.animate-fade-in {
+  animation: fade-in 0.5s ease both;
+}
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+.animate-delay-700 { animation-delay: 700ms; }
+
+/* ─── Brand / Accent utilities ──────────────────────────── */
+.text-brand     { color: var(--brand); }
+.bg-brand       { background-color: var(--brand); }
+.bg-brand-muted { background-color: var(--brand-muted); }
+.border-brand   { border-color: var(--brand); }
+
+/* ─── Hero glow blobs ───────────────────────────────────── */
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: float-glow 10s ease-in-out infinite;
+}
+
+/* ─── Availability status dot ───────────────────────────── */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: oklch(0.55 0.2 145);
+  animation: pulse-dot 2.5s ease-in-out infinite;
+}
+
+/* ─── Nav active link ───────────────────────────────────── */
+.nav-link-active {
+  color: var(--brand) !important;
+}
+
+/* ─── Timeline ──────────────────────────────────────────── */
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--brand);
+  border: 2px solid var(--background);
+  box-shadow: 0 0 0 3px var(--brand-glow);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ─── Skill category card ───────────────────────────────── */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.skill-card:hover {
+  border-color: var(--brand);
+  box-shadow: 0 4px 20px var(--brand-glow);
+  transform: translateY(-2px);
+}
+.skill-card-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--brand-muted);
+  color: var(--brand);
+}
+
+/* ─── Scroll-triggered reveal ───────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
